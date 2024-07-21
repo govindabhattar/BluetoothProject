@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var listView: ListView
     private lateinit var refreshButton: Button
     private lateinit var rvNearbyDevices: RecyclerView
-    private lateinit var nearByDevicesAdapter: DeviceAdapter
+    private lateinit var nearByDevicesAdapter: NearByDevicesAdapter
     private var bluetoothGatt: BluetoothGatt? = null
     private val mPlayer = MediaPlayer()
     private var isDevicePaired = false
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 
         private fun setUpRecyclerView() {
             deviceList = ArrayList()
-            nearByDevicesAdapter = DeviceAdapter(deviceList!!)
+            nearByDevicesAdapter = NearByDevicesAdapter(deviceList!!)
 
             rvNearbyDevices.layoutManager = LinearLayoutManager(this)
             rvNearbyDevices.addItemDecoration(DividerItemDecoration(this, LinearLayout.VERTICAL))

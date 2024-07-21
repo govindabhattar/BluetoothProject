@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DeviceAdapter(private val devices: List<BluetoothDevice>) : RecyclerView.Adapter<DeviceAdapter.DeviceViewHolder>() {
+class NearByDevicesAdapter(private val devices: List<BluetoothDevice>) : RecyclerView.Adapter<NearByDevicesAdapter.DeviceViewHolder>() {
 
     private var onPairClickListener: ((BluetoothDevice) -> Unit)? = null
     private var onUnpairClickListener: ((BluetoothDevice) -> Unit)? = null
